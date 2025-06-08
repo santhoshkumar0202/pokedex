@@ -35,5 +35,5 @@
 }
 .pokemon-image:hover{
     // background-color:burlywood ;
- transform: scale(1.2) translateY(30px);
+ transform: scale(1.2) translatex(30px) translateY(30px) ;
 }
