@@ -1,16 +1,16 @@
-#search-pokemon{
+#search-pokemon {
     width: 50%;
     padding: 2rem;
-   margin-top: 1rem;
+    margin-top: 1rem;
 }
 
-.pokedex-wrapper{
+.pokedex-wrapper {
     display: flex;
     flex-direction: column;
-    
+
     align-items: center;
 }
 
-.pokedex-wrapper h1{
+.pokedex-wrapper h1 {
     letter-spacing: 10px;
 }

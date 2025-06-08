@@ -3,36 +3,13 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
 import { Link } from "react-router-dom";
 import "./pokedexDetails.css"
+import usePokemon from "../hooks/usePokemon";
 
 
 
 function PokedexDetails(){
 let {id}=useParams();
-
-    let[pokemon,setPokemon]=useState(null);
-    let pokedex_url='https://pokeapi.co/api/v2/pokemon/';
-    console.log(id)
-
-async function download(){
-    
-
-
-    let respone=await axios.get(pokedex_url+id);
-    let pokemon=respone.data
-
-    setPokemon({
-        name:pokemon.name,
-        height:pokemon.height,
-        weight:pokemon.weight,
-        type:pokemon.types,
-        image:pokemon.sprites.other.dream_world.front_default,
-    }
-
-    )
-
-
-}
-useEffect(()=>{download()},[])
+let [pokemon]=usePokemon(id)
 
 return(
     <>
