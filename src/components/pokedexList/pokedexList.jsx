@@ -6,8 +6,10 @@ import Pokedex from "../pokedex/pokedex.jsx";
 import usePokemonList from "../hooks/usePokemonList.js";
 
 function PokedexList() {
-
-    const[pokemonListState,setPokmonListState]=usePokemonList();
+  let default_url = "https://pokeapi.co/api/v2/pokemon";
+  
+const[pokemonListState,setPokmonListState]=usePokemonList(default_url);
+ 
 
   return (
     <div className="pokemon-list-wrapper">
