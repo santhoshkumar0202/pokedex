@@ -8,9 +8,10 @@ import Pokemon from "../pokemon/pokemon";
 
 
 
-function PokedexDetails(){
-let {id}=useParams();
-let [pokemon,pokemonListState]=usePokemon(id)
+function PokedexDetails({pokemonName}){
+
+let [pokemon,pokemonListState]=usePokemon(pokemonName)
+console.log(pokemonName)
 
 return(
     <>
@@ -27,8 +28,8 @@ return(
     </div>
     <div className="pokemondex-attr">
         <div> Height:{pokemon.height}</div>
+
         <div> Weight:{pokemon.weight}</div>
-       
        
     </div>
     <div className="pokemondex-type">

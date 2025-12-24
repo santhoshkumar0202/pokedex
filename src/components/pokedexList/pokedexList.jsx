@@ -38,6 +38,7 @@ const[pokemonListState,setPokmonListState]=usePokemonList(default_url);
           next
         </button>
       </div>
+      {console.log(pokemonListState)}
 
       <div className="pokemon-list">
         {pokemonListState.pokemonlist.map((poke) => (
